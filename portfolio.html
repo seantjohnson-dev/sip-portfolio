@@ -1,69 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio Projects</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body class="theme-light">
-  <header class="site-header">
-    <h1 class="site-title">My Projects</h1>
-    <nav class="navbar">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="portfolio.html" class="nav-link active">Projects</a>
-      <a href="about.html" class="nav-link">About</a>
-      <a href="objectives.html" class="nav-link">Objectives</a>
-      <a href="sip.html" class="nav-link">SIP</a>
-    </nav>
-  </header>
 
-  <main class="home-section">
-    <section class="preview-gallery">
-      <article class="project-card">
-        <img src="img/placeholder.png" alt="3D Model Preview" class="preview-image" />
-        <h3>3D Model #1</h3>
-        <p>A detailed model designed using Blender and optimized for WebGL viewing.</p>
-        <button class="btn-view" onclick="view3DModel('canvas1')">View 3D Model</button>
-        <canvas id="canvas1" class="model-canvas hidden"></canvas>
-      </article>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Projects</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
 
-      <article class="project-card">
-        <img src="img/placeholder.png" alt="Robotics Project" class="preview-image" />
-        <h3>Robotics Build #1</h3>
-        <p>This is a robotic arm built with servos and an Arduino controller, capable of simple pick-and-place operations.</p>
-      </article>
+    <body class="theme-light">
+        <header class="site-header">
+            <h1 class="site-title">Projects</h1>
 
-      <article class="project-card">
-        <img src="img/placeholder.png" alt="Software Project" class="preview-image" />
-        <h3>Software Tool #1</h3>
-        <p>A Python-based utility for automating file organization across multiple directories.</p>
-      </article>
+            <button class="hamburger" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
 
-      <article class="project-card">
-        <img src="img/placeholder.png" alt="3D Model Preview" class="preview-image" />
-        <h3>3D Model #2</h3>
-        <p>Another WebGL-optimized model used to experiment with texture mapping and lighting effects.</p>
-        <button class="btn-view" onclick="view3DModel('canvas2')">View 3D Model</button>
-        <canvas id="canvas2" class="model-canvas hidden"></canvas>
-      </article>
-    </section>
-  </main>
+            <nav class="navbar">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="portfolio.html" class="nav-link">Projects</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="objectives.html" class="nav-link">Objectives</a>
+                <a href="sip.html" class="nav-link">SIP</a>
+            </nav>
+        </header>
 
-  <footer class="site-footer">
-    <p>&copy; 2025 Your Name</p>
-  </footer>
+        <main class="home-section">
+            <section class="preview-gallery">
+                <article class="project-card">
+                    <img src="img/placeholder.png" alt="3D Model Preview" class="preview-image" />
+                    <h3>3D Model #1</h3>
+                    <p>A detailed model designed using Blender and optimized for WebGL viewing.</p>
+                    <button class="btn-view" onclick="view3DModel('canvas1')">View 3D Model</button>
+                    <canvas id="canvas1" class="model-canvas hidden"></canvas>
+                </article>
 
-  <script>
-    function view3DModel(canvasId) {
-      const canvas = document.getElementById(canvasId);
-      if (canvas.classList.contains('hidden')) {
-        canvas.classList.remove('hidden');
-        // WebGL viewer logic goes here
-      } else {
-        canvas.classList.add('hidden');
-      }
-    }
-  </script>
-</body>
+                <article class="project-card">
+                    <img src="img/placeholder.png" alt="Robotics Project" class="preview-image" />
+                    <h3>Robotics Build #1</h3>
+                    <p>This is a robotic arm built with servos and an Arduino controller, capable of simple
+                        pick-and-place operations.</p>
+                </article>
+
+                <article class="project-card">
+                    <img src="img/placeholder.png" alt="Software Project" class="preview-image" />
+                    <h3>Software Tool #1</h3>
+                    <p>A Python-based utility for automating file organization across multiple directories.</p>
+                </article>
+
+                <article class="project-card">
+                    <img src="img/placeholder.png" alt="3D Model Preview" class="preview-image" />
+                    <h3>3D Model #2</h3>
+                    <p>Another WebGL-optimized model used to experiment with texture mapping and lighting effects.</p>
+                    <button class="btn-view" onclick="view3DModel('canvas2')">View 3D Model</button>
+                    <canvas id="canvas2" class="model-canvas hidden"></canvas>
+                </article>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>&copy; 2025 Sean Johnson</p>
+        </footer>
+
+        <script>
+            function view3DModel(canvasId) {
+                const canvas = document.getElementById(canvasId);
+                if (canvas.classList.contains('hidden')) {
+                    canvas.classList.remove('hidden');
+                    // WebGL viewer logic goes here
+                } else {
+                    canvas.classList.add('hidden');
+                }
+            }
+        </script>
+        <script src="js/main.js"></script>
+    </body>
+
 </html>

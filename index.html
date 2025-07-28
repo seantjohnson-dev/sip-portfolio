@@ -1,66 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sean at UAT</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body class="theme-light">
-  <header class="site-header">
-    <h1 class="site-title">Sean at UAT</h1>
-    <nav class="navbar">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="portfolio.html" class="nav-link">Projects</a>
-      <a href="about.html" class="nav-link">About</a>
-      <a href="objectives.html" class="nav-link">Objectives</a>
-      <a href="sip.html" class="nav-link">SIP</a>
-    </nav>
-  </header>
 
-  <main class="home-section">
-    <section class="intro">
-      <h2>Welcome to My Portfolio</h2>
-      <p>This is a showcase of my 3D modeling, robotics, and software development projects, including my SIP project.</p>
-    </section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sean at UAT</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
 
-    <section class="preview-gallery">
-      <article class="project-card">
-        <img src="img/placeholder.png" alt="3D Model Preview" class="preview-image" />
-        <h3>3D Model Title</h3>
-        <p>Short description of the 3D model or project.</p>
-        <button class="btn-view" onclick="view3DModel('model1')">View 3D Model</button>
-        <canvas id="model1" class="model-canvas hidden"></canvas>
-      </article>
+  <body class="theme-light">
+    <header class="site-header">
+      <h1 class="site-title">Sean at UAT</h1>
 
-      <article class="project-card">
-        <img src="img/placeholder.png" alt="Robotic Project Preview" class="preview-image" />
-        <h3>Robotics Project Title</h3>
-        <p>Short description of the robotic build project.</p>
-      </article>
+      <button class="hamburger" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
 
-      <article class="project-card">
-        <img src="img/placeholder.png" alt="Software Project Preview" class="preview-image" />
-        <h3>Software Project Title</h3>
-        <p>Short description of the software tool or application.</p>
-      </article>
-    </section>
-  </main>
+      <nav class="navbar">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="portfolio.html" class="nav-link">Projects</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="objectives.html" class="nav-link">Objectives</a>
+        <a href="sip.html" class="nav-link">SIP</a>
+      </nav>
+    </header>
 
-  <footer class="site-footer">
-    <p>&copy; 2025 Your Name</p>
-  </footer>
+    <main class="home-section">
+      <section class="intro">
+        <h2>Welcome to My Portfolio</h2>
+        <p>This is a showcase of my 3D modeling, robotics, and software development projects, including my SIP project.
+        </p>
+      </section>
 
-  <script>
-    function view3DModel(canvasId) {
-      const canvas = document.getElementById(canvasId);
-      if (canvas.classList.contains('hidden')) {
-        canvas.classList.remove('hidden');
-        // Initialize WebGL rendering here
-      } else {
-        canvas.classList.add('hidden');
+      <section class="preview-gallery">
+        <article class="project-card">
+          <img src="img/placeholder.png" alt="3D Model Preview" class="preview-image" />
+          <h3>3D Model Title</h3>
+          <p>Short description of the 3D model or project.</p>
+          <button class="btn-view" onclick="view3DModel('model1')">View 3D Model</button>
+          <canvas id="model1" class="model-canvas hidden"></canvas>
+        </article>
+
+        <article class="project-card">
+          <img src="img/placeholder.png" alt="Robotic Project Preview" class="preview-image" />
+          <h3>Robotics Project Title</h3>
+          <p>Short description of the robotic build project.</p>
+        </article>
+
+        <article class="project-card">
+          <img src="img/placeholder.png" alt="Software Project Preview" class="preview-image" />
+          <h3>Software Project Title</h3>
+          <p>Short description of the software tool or application.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2025 Sean Johnson</p>
+    </footer>
+
+    <script>
+      function view3DModel(canvasId) {
+        const canvas = document.getElementById(canvasId);
+        if (canvas.classList.contains('hidden')) {
+          canvas.classList.remove('hidden');
+          // Initialize WebGL rendering here
+        } else {
+          canvas.classList.add('hidden');
+        }
       }
-    }
-  </script>
-</body>
+    </script>
+    <script src="js/main.js"></script>
+  </body>
+
 </html>
